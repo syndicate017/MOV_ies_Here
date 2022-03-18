@@ -1,5 +1,6 @@
 package com.github.syndicate017.movieshere.Utils;
 
+//This class is used for Helpers
 public class Credentials {
 
     //This app using TMBD API
