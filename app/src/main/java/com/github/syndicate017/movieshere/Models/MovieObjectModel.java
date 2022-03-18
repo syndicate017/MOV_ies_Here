@@ -4,10 +4,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * The type Movie.
+ * The type MovieObjectModel.
  */
 //Model Class for Movies Object
-public class Movie implements Parcelable {
+public class MovieObjectModel implements Parcelable {
 
     private int movieId;
     private String movieTitle;
@@ -17,13 +17,13 @@ public class Movie implements Parcelable {
     private String moviePosterPath;
 
     /**
-     * Instantiates a new Movie.
+     * Instantiates a new MovieObjectModel.
      */
-    public Movie() {
+    public MovieObjectModel() {
     }
 
     /**
-     * Instantiates a new Movie.
+     * Instantiates a new MovieObjectModel.
      *
      * @param movieId          the movie id
      * @param movieTitle       the movie title
@@ -32,7 +32,7 @@ public class Movie implements Parcelable {
      * @param movieVoteAverage the movie vote average
      * @param moviePosterPath  the movie poster path
      */
-    public Movie(int movieId, String movieTitle, String movieOverview, String movieReleaseDate, double movieVoteAverage, String moviePosterPath) {
+    public MovieObjectModel(int movieId, String movieTitle, String movieOverview, String movieReleaseDate, double movieVoteAverage, String moviePosterPath) {
         this.movieId = movieId;
         this.movieTitle = movieTitle;
         this.movieOverview = movieOverview;
@@ -42,11 +42,11 @@ public class Movie implements Parcelable {
     }
 
     /**
-     * Instantiates a new Movie.
+     * Instantiates a new MovieObjectModel.
      *
      * @param in the in
      */
-    protected Movie(Parcel in) {
+    protected MovieObjectModel(Parcel in) {
         movieId = in.readInt();
         movieTitle = in.readString();
         movieOverview = in.readString();
@@ -58,15 +58,15 @@ public class Movie implements Parcelable {
     /**
      * The constant CREATOR.
      */
-    public static final Creator<Movie> CREATOR = new Creator<Movie>() {
+    public static final Creator<MovieObjectModel> CREATOR = new Creator<MovieObjectModel>() {
         @Override
-        public Movie createFromParcel(Parcel in) {
-            return new Movie(in);
+        public MovieObjectModel createFromParcel(Parcel in) {
+            return new MovieObjectModel(in);
         }
 
         @Override
-        public Movie[] newArray(int size) {
-            return new Movie[size];
+        public MovieObjectModel[] newArray(int size) {
+            return new MovieObjectModel[size];
         }
     };
 
